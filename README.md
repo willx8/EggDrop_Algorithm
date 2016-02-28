@@ -1,6 +1,3 @@
-# EggDrop_Algorithm
-
-
 ## Introduction
 
 With the code provided, you can:
