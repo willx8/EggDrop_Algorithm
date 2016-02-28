@@ -3,6 +3,7 @@ import math
 import egg_drop
 from egg_skeleton import EggDropError
 
+
 class EggDropTest():
     def __init__(self):
         self.rand_upper_bound = 100
