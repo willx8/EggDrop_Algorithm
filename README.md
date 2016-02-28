@@ -37,7 +37,7 @@ With the code provided, you can:
 
 ### 2. Implement methods in `egg_drop.py`
 
-*NOTE: you don't have to change codes in egg_skeleton.py and test.py.*
+*NOTE: you don't have to change codes in `egg_skeleton.py` and `test.py`.*
 
 ### 3. Run `test.py`
 
@@ -75,4 +75,4 @@ However you may edit that constant in `test.py`.*
 
 *If it interests you, [here is my implementation of all 5 versions of the algorithm]("").*
 
-# ENJOY! #
+** ENJOY! **
