@@ -7,6 +7,7 @@ class EggDropTest():
     def __init__(self):
         self.rand_upper_bound = 100
         self.rand_lower_bound = 2
+        self.total_tests = 100
 
     def test_all(self):
         self.test0()
@@ -56,8 +57,8 @@ class EggDropTest():
             return
         else:
             print "Start testing version", version, "...",
-        total_tests=100
-        for i in range(total_tests):
+
+        for i in range(self.total_tests):
             T, N = self.para_generator()
             max_eggs = max_eggs_func(T, N)
             max_tosses = max_tosses_func(T, N)
