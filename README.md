@@ -1,6 +1,18 @@
 # EggDrop_Algorithm
 
-## Egg Drop
+
+## Introduction
+
+With the code provided, you can:
+
+- Focus on writing codes for each version without checking whether eggs or tosses has been used up, which pollutes your code.
+
+- Stop worrying about the test, cuz it's been taken care of by the test & skeleton.
+
+- Expand more version easily if you like: all the limitations in test.py is written in lambda so just write formula and you can expand it.
+
+
+## The Problem
 
 These python files are intended to help when solving the algorithm problem ***Egg Drop***:
 
@@ -20,18 +32,7 @@ These python files are intended to help when solving the algorithm problem ***Eg
 > (Advanced)Version 4: 2 eggs and <= c*T^(1/2) tosses for some fixed constant c.
 
 
-## Introduction
-
-With the code provided, you can:
-
-- Focus on writing codes for each version without checking whether eggs or tosses has been used up, which pollutes your code.
-
-- Stop worrying about the test, cuz it's been taken care of by the test & skeleton.
-
-- Expand more version easily if you like: all the limitations in test.py is written in lambda so just write formula and you can expand it.
-
-
-## How to
+## How To Use The Code
 
 ### 1. Git clone it.
 
@@ -68,11 +69,10 @@ Start testing version 4 ... OK
 
 If any error occures, just fix them and rerun.
 
-*P.S: I go with 3 for the constant *c* in version 4, which is enough for my implementation. 
-However you may edit that constant in `test.py`.*
+*P.S: I go with 3 for the constant c in version 4, which is enough for my implementation. However you may edit that constant in `test.py`.*
 
 ---
 
 *If it interests you, [here is my implementation of all 5 versions of the algorithm]("").*
 
-** ENJOY! **
+ENJOY!
