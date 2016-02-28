@@ -73,6 +73,6 @@ If any error occures, just fix them and rerun.
 
 ---
 
-*If it interests you, [here is my implementation of all 5 versions of the algorithm]("").*
+*If it interests you, [here is my implementation of all 5 versions of the algorithm]("https://github.com/willx8/egg-drop-solution/blob/master/egg_drop.py").*
 
 ENJOY!
