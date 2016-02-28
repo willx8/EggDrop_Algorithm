@@ -2,7 +2,6 @@ import random
 import math
 import egg_drop
 from egg_skeleton import EggDropError
-import unittest
 
 class EggDropTest():
     def __init__(self):
@@ -57,8 +56,6 @@ class EggDropTest():
             return
         else:
             print "Start testing version", version, "...",
-        passed = True
-        fails = 0
         total_tests=100
         for i in range(total_tests):
             T, N = self.para_generator()
@@ -69,23 +66,16 @@ class EggDropTest():
                 result = getattr(eggdrop, "version"+str(version))()
                 if result != T:
                     print "\nWrong answer! Expect", T, "Got", result,
-                    print "Fail test: T =", T, "N =", N
-                    fails+=1
-                    passed = False
-                    continue
+                    print "FAIL: T =", T, "N =", N
+                    break
             except NotImplementedError:
                 print "\nYou have not implemented version", version, "yet!"
                 return
             except EggDropError as e:
                 print "\nError occur:", e.msg,
-                print "Fail test: T =", T, "N =", N
-                fails+=1
-                passed = False
-                continue
-        if passed:
-            print "OK"
-        else:
-            print "FAILED: Version ", version, ". Fail rate:", 100*fails/total_tests, "%"
+                print "FAIL: T =", T, "N =", N
+                return
+        print "OK"
 
 
 def main():
