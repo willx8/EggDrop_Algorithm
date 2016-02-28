@@ -16,6 +16,12 @@ class EggDrop(egg_skeleton.EggDropSkeleton):
         (Advanced)Version 4: 2 eggs and <= c*T^(1/2) tosses for some fixed constant c.
     """
 
+    # This is a sample implementation. As you can see, the functions are expected to return
+    # the value of T. You can access self.N for building height and call self.toss(i) to toss
+    # the egg at floor i. The self.toss(i) will return True if the egg is broken, False otherwise.
+    # The tosses and eggs you used will be automatically recorded. Infinite eggs and tosses may
+    # be assumed. The test will report error if they exceeds the limitation.
+    # Of course you can call self.T for the exact value of T, but that'd spoil all the fun, wouldn't it?
     def version0(self):
         floor = 0
         egg_broken = False
@@ -25,74 +31,13 @@ class EggDrop(egg_skeleton.EggDropSkeleton):
         return floor
 
     def version1(self):
-        upper = self.N
-        lower = 1
-        found = False
-        floor = -1
-        while not found:
-            if upper - lower == 0:
-                found = True
-                floor = lower
-                break
-            t = (upper + lower) / 2
-            egg_broken = self.toss(t)
-            if egg_broken:
-                upper = t
-            else:
-                lower = t + 1
-        return floor
+        raise NotImplementedError()
 
-    def version2(self): # This one is in corner cases!
-        upper = self.N
-        lower = 1
-        story = 1
-        while story <= self.N:
-            if not self.toss(story):
-                lower = story
-                story *= 2
-            else:
-                upper = story
-                break
-        lower += 1
-
-        found = False
-        floor = -1
-        while not found:
-            if upper - lower <= 0:
-                found = True
-                floor = upper
-                break
-            t = (upper + lower) / 2
-            egg_broken = self.toss(t)
-            if egg_broken:
-                upper = t
-            else:
-                lower = t + 1
-        return floor
+    def version2(self):
+        raise NotImplementedError()
 
     def version3(self):
-        S = int(math.sqrt(self.N)) + 1
-        floor = 1 - S
-        while floor + S <= self.N:
-            if self.toss(floor + S):
-                if floor + S == 1: return 1
-                break
-            floor += S
-
-        for i in range(floor + 1, min(floor + S, self.N)):
-            if self.toss(i):
-                return i
-        return min(floor + S, self.N)
+        raise NotImplementedError()
 
     def version4(self):
-        egg_broken = False
-        i = 1
-        while i * i <= self.N:
-            if self.toss(i * i): # if an egg breaks
-                break
-            i += 1
-
-        for i in range((i - 1) * (i - 1) +1, min(self.N, i * i)):
-            if self.toss(i):
-                return i
-        return min(self.N, math.pow(i, 2))
+        raise NotImplementedError()
